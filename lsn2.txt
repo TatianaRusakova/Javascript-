@@ -1,0 +1,129 @@
+1) 
+var a = 1, b = 1, c, d;
+c = ++a; alert(c); // 2    - потому что мы используем префиксный инкремент, который сначала  увеличивает, потом возвращает значение
+d = b++; alert(d); // 1		- потому что мы используем постинкремент, который сначала  возвращает значение, потом увеличивает
+c = (2+ ++a); alert(c); // 5	-потому что 2 складывается с полученным после префиксного инкремента значения, увеличенного на 1, т.е. 2+(2+1)
+d = (2+ b++); alert(d); // 4	-потому что 2 складывается с полученным после постинкрементного значения(1), которое после возврата было увеличено на 1,но при втором инкременте снова сначала выводится, т.е. 2+(1+1)
+alert(a); // 3		-потому что в результате префиксного инкремента значение сначала считается, потом выводится и получается 3
+alert(b); // 3		-потому что в результате постинкремента значение сначала выводится, потом увеличивается и получается 3
+
+2)
+var a = 2;
+var x = 1 + (a *= 2);
+x будет равен 5, т.е. 1+(2*2)
+
+3)
+var a=5;
+var b=3;
+if ((a>0) &&((b>0)){
+console.log('a-b');
+}else{
+if ((a<0) &&((b<0)){
+console.log('a*b');
+}else{
+console.log('a+b');}
+
+4)
+function fn(){
+a= +prompt('Введите число от 1 до 15');
+let resylt;
+switch(a){
+case 1:
+result='Один';
+case 2:
+result='Два';
+case 3:
+result='Три';
+case 4:
+result='Четыре';
+case 5:
+result='Пять';
+case 6:
+result='Шесть';
+case 7:
+result='Семь'; 
+case 8:
+result='Восемь';
+case 9:
+result='Девять';
+case 10:
+result='Десять';
+case 11:
+result='Одиннадцать';
+case 12:
+result='Двеннадцать';
+case 13:
+result='Триннадцать';
+case 14:
+result='Четырнадцать';
+case 15:
+result='Пятнадцать';}
+return result}
+
+
+5)
+function sum(a,b){
+let result;
+if ((NaN(a))||(NaN(b))){
+return;}
+result=a+b;
+return resutl;
+}
+
+function razn(a,b){
+let result;
+if ((NaN(a))||(NaN(b))){
+return;}
+result=a-b;
+return resutl;
+}
+
+function proizv(a,b){
+let result;
+if ((NaN(a))||(NaN(b))){
+return;}
+result=a*b;
+return resutl;
+}
+
+function chastn(a,b){
+let result;
+if ((NaN(a))||(NaN(b))){
+return;}
+result=a/b;
+return resutl;
+}
+
+6)function mathOperators(arg1,arg2,operator){
+let result;
+switch(operator){
+case 'summa':
+let result=sum(arg1,arg2);
+break;
+case 'raznost':
+let result=razn(arg1,arg2);
+break;
+case 'proizvedenie':
+let result=proizv(arg1,arg2);
+break;
+case 'chastnoe':
+let result=chastn(arg1,arg2);
+break;}
+return result;}
+
+7)null>0   //false
+null<0		//false
+null>=0	//true
+, т.к. null преобразуется к 0, а 0 остается 0
+
+
+8)
+function power(val,pom){
+if (pom===0){
+retutn 1 ;
+} else{
+return val+val*val;
+--pom;}
+}
+
+
